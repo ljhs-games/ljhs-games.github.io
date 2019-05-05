@@ -2,6 +2,7 @@ $font-stack:    Roboto, sans-serif;
 $primary-color: #ff6f59
 $link-color: #735290
 $background-color: #3B3355
+$break-small: 600px
 
 body
     font: 100% $font-stack
@@ -16,6 +17,13 @@ a
 h1
     text-align: center
 
-    
-.row
-    display: flex;
+.column
+    float: left
+    @media screen and (max-width: $break-small)
+        width: 100%
+
+
+.row:after
+    content: ""
+    display: table
+    clear: both
