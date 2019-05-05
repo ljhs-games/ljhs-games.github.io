@@ -19,11 +19,13 @@ h1
 
 .column
     float: left
+    padding-right: 10px
     @media screen and (max-width: $break-small)
         width: 100% !important
 
 
-.row:after
-    content: ""
-    display: table
-    clear: both
+.row
+    @media screen and (max-width: $break-small)
+        flex-wrap: wrap
+    flex-direction: row
+    display: flex
