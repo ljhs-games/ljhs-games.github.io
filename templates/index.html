@@ -30,6 +30,11 @@
 </head>
 
 <body>
+    <div class="navbar">
+        {{ macros::column(cols=3) }}
+            <img src="/logo.svg" id="logo">
+        </div>
+    </div>
     {% block content %}
     <h1>Members</h1>
     <div class="row">

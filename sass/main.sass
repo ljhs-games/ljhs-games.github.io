@@ -4,6 +4,9 @@ $link-color: #EF233C
 $background-color: #2B2D42
 $break-small: 600px
 
+#logo
+    width: 100px
+
 body
     font: 100% $font-stack
     color: $primary-color
@@ -17,15 +20,26 @@ a
 h1
     text-align: center
 
-.column
+
+%column-shared
     float: left
     padding-right: 10px
     @media screen and (max-width: $break-small)
         width: 100% !important
 
 
-.row
+.column
+    @extend %column-shared
+
+%row-shared
     @media screen and (max-width: $break-small)
         flex-wrap: wrap
     flex-direction: row
     display: flex
+
+
+.row
+    @extend %row-shared
+
+.navbar
+    @extend %row-shared
