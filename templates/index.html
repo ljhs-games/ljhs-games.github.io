@@ -31,21 +31,14 @@
 
 <body>
     <div class="navbar">
-        {{ macros::column(cols=3) }}
+        {{ macros::column(cols=2) }}
             <img src="/logo.svg" id="logo">
+        </div>
+        {{ macros::column(cols=2) }}
+            <a href="/members" id="nav-link">Members</a>
         </div>
     </div>
     {% block content %}
-    <h1>Members</h1>
-    <div class="row">
-    {% set members = get_section(path="members/_index.md") %}
-    {% for member in members.pages %}
-        {{ macros::column(cols=members.pages | length) }}
-        <h2>{{ member.title }}</h2>
-        {{ member.content | safe }}
-        </div>
-    {% endfor %}
-    </div>
     {{ section.content | safe  }}
     {% endblock content %}
 </body>
