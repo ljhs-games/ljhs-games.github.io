@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ljhs-games.github.io/sitemap.xml
