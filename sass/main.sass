@@ -2,10 +2,12 @@ $font-stack:    Roboto, sans-serif;
 $primary-color: #edf2f4
 $link-color: #EF233C
 $background-color: #2B2D42
+$navbar-color: #333;
 $break-small: 600px
 
 #logo
-    width: 100px
+    width: 50px
+    padding: 5px
 
 body
     font: 100% $font-stack
@@ -42,4 +44,35 @@ h1
     @extend %row-shared
 
 .navbar
-    @extend %row-shared
+    overflow: hidden
+    background-color: $navbar-color
+    position: relative
+    .logo-link
+        padding: 0
+    // .logo-link
+        // height: 51px
+    #nav-links
+        display: none
+    a
+        color: $link-color
+        padding: 14px 16px
+        text-decoration: none
+        font-size: 17px
+        display: block
+    a.icon
+        background: black
+        display: block
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
+        i
+            position: relative;
+            top: calc(50% - 28px)
+    a:hover
+        background-color: #ddd
+        color: black
+
+.active
+    background-color: #4caf50
+    color: white
